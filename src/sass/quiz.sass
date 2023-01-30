@@ -1,2 +1,78 @@
-.quiz__card
-    background-color: $quiz-card
+@use 'color'
+.card
+    background-color: color.$quiz-card
+    padding:  
+        top: 1rem
+        left: 2rem
+        right: 2rem
+        bottom: 10rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 5rem
+    border-radius: 5px
+    box-shadow: 6px 4px 11px -3px rgba(0,0,0,0.3)
+.card__quiz
+    background-color: color.$quiz-card
+    padding: 2rem 1rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.card__title
+    text-align: center
+    font:
+        size: 2rem
+        weight: 500
+        family: sans-serif
+    color: white
+.card__form
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-content: center
+    gap: 1rem
+    width: 50%
+.card__option
+    height: 2rem
+    background-color: color.$quiz-option
+    color: white
+    border: none
+    font:
+        size: 1.2rem
+    padding: 1.5rem
+    display: flex
+    justify-content: center
+    align-items: center
+
+    &:hover
+        cursor: pointer
+        background-color: black
+        transition:
+            delay: 0.2s
+.card__nav-btns
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: row
+    gap: 10rem
+    padding: 1rem
+.card__nav-btn
+    padding: 1rem 2rem
+        
+.card__btn-start
+    width: 50%
+    padding: 2rem 3rem
+    background-color: color.$quiz-option
+    border-style: solid
+    border-color: color.$quiz-option
+    font:
+        size: 3rem
+    color: white
+    border-radius: 5px
+    &:hover
+        border-color: black
+        cursor: pointer
+        

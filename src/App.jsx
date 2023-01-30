@@ -1,10 +1,11 @@
 import './App.css'
+import Card from './components/Card/Card'
 
 function App() {
 
   return (
-    <div className='quiz-background'>
-      
+    <div className='app-background'>
+      <Card/>
     </div>
   )
 }
