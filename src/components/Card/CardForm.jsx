@@ -1,19 +1,16 @@
 import CardOptions from "./CardOptions"
-import CardTitle from "./CardTitle"
 
-function CardForm(){
+function CardForm(props){
 
 
     return(
         <>  
-            <CardTitle>Questão 1</CardTitle>
-
             <form className="card__form">
-                <CardOptions>Nunca</CardOptions>
-                <CardOptions>Poucas vezes</CardOptions>
-                <CardOptions>Neutro</CardOptions>
-                <CardOptions>Com certa frequencia</CardOptions>
-                <CardOptions>Sempre</CardOptions>
+                <CardOptions event={props.event}>Nunca</CardOptions>
+                <CardOptions event={props.event}>Poucas vezes</CardOptions>
+                <CardOptions event={props.event}>Neutro</CardOptions>
+                <CardOptions event={props.event}>Com certa frequencia</CardOptions>
+                <CardOptions event={props.event}>Sempre</CardOptions>
             </form>
         </>
     )

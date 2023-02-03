@@ -1,12 +1,14 @@
 import CardButton from "./CardButton"
+import { useContext } from "react"
+import { QuizContext } from "../../context/quiz"
 
 function CardNav() {
-
+    const [quizState, dispatch] = useContext(QuizContext)
 
     return(
         <div className="card__nav-btns">
-            <CardButton>Esquerda</CardButton>
-            <CardButton>Direita</CardButton>
+            <button onClick={() => dispatch({type: 'start'})}>Voltar ao inicio</button>
+            <button>Direita</button>
         </div>
     )
 }

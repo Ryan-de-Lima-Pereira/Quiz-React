@@ -1,28 +1,21 @@
-import CardButton from "./CardButton"
-import CardTitle from "./CardTitle"
-import { useState } from "react"
+import { useContext } from "react"
+import { QuizContext } from "../../context/quiz"
 import QuizCard from "./QuizCard"
+import Welcome from "./Welcome";
 
 function Card(){
-    const [isStart, setStart] = useState(false)
-    const clickEvent = () => {
-        return setStart(true)
-    }
+    const [quizState, dispatch] = useContext(QuizContext);
 
-    if(!isStart){
-        return (
-        
-            <div className="card">
-                <CardTitle>Quiz: Quem eu sou no CxM</CardTitle>
-                <CardButton classSet="card__btn-start" Event={clickEvent}> 
-                Iniciar
-                </CardButton>
-            </div>
-        )
+    if(quizState.gameStage === 'start'){
+        return (<Welcome/>)
+
+    }else if(quizState.gameStage === 'playing'){
+        return(<QuizCard/>)
     }
-    return(
-        <QuizCard/>
+    return (
+        <h1>Deu erro chefia</h1>
     )
+    
     
 }
 

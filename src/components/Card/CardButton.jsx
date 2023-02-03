@@ -2,7 +2,7 @@ function CardButton(props) {
 
 
     return(
-        <button className={props.classSet} onClick={props.Event}>{props.children}</button>
+        <button className={props.classSet} onClick={props.event}>{props.children}</button>
     )
 }
 
