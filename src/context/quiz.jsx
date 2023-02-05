@@ -6,7 +6,8 @@ const STAGES = ['start','playing','end']
 
 const initialStage = {
     gameStage: STAGES[0],
-    questions
+    questions,
+    currentQuestion: 0
 }
 
 const quizReducer = (state, action) => {
@@ -14,17 +15,23 @@ const quizReducer = (state, action) => {
     switch(action.type){
         case 'start':
             return {
-                ...initialStage,
+                ...state,
                 gameStage: STAGES[0]
-            }
+            };
         case 'playing':
             return {
-                ...initialStage,
+                ...state,
                 gameStage: STAGES[1]
-            }
+            };
+        case 'nextQuestion':
+            const nextQuestion =  state.currentQuestion + 1
+            return{
+                ...state,
+                currentQuestion: nextQuestion   
+            };
         default:
             return state
-    }
+    };
 
 }
 

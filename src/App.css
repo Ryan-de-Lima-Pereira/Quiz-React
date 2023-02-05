@@ -15,7 +15,7 @@
 
 .card__quiz {
   background-color: #D4069D;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem 0rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,7 +24,7 @@
 
 .card__title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 500;
   font-family: sans-serif;
   color: white;
@@ -50,6 +50,12 @@
   justify-content: center;
   align-items: center;
 }
+.card__option-sucess {
+  background-color: green;
+}
+.card__option-error {
+  background-color: red;
+}
 .card__option:hover {
   cursor: pointer;
   background-color: black;
@@ -58,15 +64,31 @@
 
 .card__nav-btns {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  gap: 10rem;
   padding: 1rem;
+  width: 100%;
 }
 
 .card__nav-btn {
-  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  background-color: #871268;
+  border-style: solid;
+  border-color: #871268;
+  color: white;
+  font-size: 1.2rem;
+}
+.card__nav-btn:hover {
+  cursor: pointer;
+  border-color: black;
+}
+
+.card__nav-arrow {
+  background-color: white;
 }
 
 .card__btn-start {
@@ -86,7 +108,7 @@
 
 .question__index {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 500;
   font-family: sans-serif;
 }
