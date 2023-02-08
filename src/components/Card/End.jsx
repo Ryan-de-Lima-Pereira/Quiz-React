@@ -10,7 +10,6 @@ const End = () => {
                 <h1 className="card__title">Fim do quiz</h1>
 
                 <h3 className="question__index">Você acertou: {quizState.rightQuestions}</h3>
-                <AutoPlayer/>
         </div>
     )
 }

@@ -9,6 +9,7 @@ const AutoPlayer = () =>{
         switch(quizState.difficult){
             case 'none':
                 audio.pause()
+                console.log('none no effect')
                 break;
             case 'easy':
                 audio.src = quizState.currentMusic
@@ -22,13 +23,27 @@ const AutoPlayer = () =>{
                 break;
             case 'hard':
                 audio.src = quizState.currentMusic
-                audio.volume = 0.1
+                audio.play()
+                audio.volume = 0.2
                 break;
             default:
                 audio.pause()
+                console.log('default no effect')
                 break;
         }
     }, [quizState.currentMusic])
+
+    useEffect(() => {
+        audio.addEventListener('ended', () =>{
+            audio.play()
+        })
+        return function cleaup(){
+            audio.removeEventListener('ended', () =>{
+                audio.play()
+            })
+        }
+    })
+
 
 
     return(

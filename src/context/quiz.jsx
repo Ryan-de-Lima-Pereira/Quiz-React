@@ -14,7 +14,7 @@ const initialStage = {
     questions,
     currentQuestion: 0,
     difficult: difficultQuestions[0],
-    currentMusic: MusicEasy,
+    currentMusic: null,
     rightQuestions: 0
 }
 
@@ -53,14 +53,16 @@ const quizReducer = (state, action) => {
             return {
                 ...state,
                 gameStage: STAGES[1],
-                difficult: difficultQuestions[1]
+                difficult: difficultQuestions[1],
+                currentMusic: MusicEasy
             };
         case 'end':
             return {
                 ...state,
                 gameStage: STAGES[2],
                 currentQuestion: state.questions.length - 1,
-                difficult: difficultQuestions[0]
+                difficult: difficultQuestions[0],
+                currentMusic: null
             };
         case 'nextQuestion':
             const nextQuestion =  state.currentQuestion + 1
