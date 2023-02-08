@@ -1,5 +1,6 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { QuizContext } from "../../context/quiz"
+import End from "./End";
 import QuizCard from "./QuizCard"
 import Welcome from "./Welcome";
 
@@ -10,8 +11,10 @@ function Card(){
         return (<Welcome/>)
 
     }else if(quizState.gameStage === 'playing'){
-        return(<QuizCard/>)
-    }
+        return(<QuizCard/>) 
+
+    }else if(quizState.gameStage === 'end')
+        return(<End/>)
     return (
         <h1>Deu erro chefia</h1>
     )

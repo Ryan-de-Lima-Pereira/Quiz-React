@@ -57,7 +57,7 @@
             delay: 0.2s
 .card__nav-btns
     display: flex
-    justify-content: space-between
+    justify-content: flex-end
     align-items: center
     flex-direction: row
     padding: 1rem
@@ -73,7 +73,7 @@
         color: color.$quiz-option
     color: white
     font:
-        size: 1.2rem
+        size: 1rem
     &:hover
         cursor: pointer
         border:
@@ -100,3 +100,13 @@
         size: 1.4rem
         weight: 500
         family: sans-serif
+    margin: 0.2rem
+.question__difficult
+    color: white
+    font:
+        size: 1.4rem
+        weight: 500
+        family: sans-serif
+    margin: 0.2rem
+.btn-hidden
+    visibility: hidden
